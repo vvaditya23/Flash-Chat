@@ -31,12 +31,12 @@
                                     <segue destination="5v2-hE-4Ub" kind="show" id="2ap-zJ-a2v"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ">
                                 <rect key="frame" x="52" y="418" width="310" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ph1-wX-D3a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -166,10 +166,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="nb9-XD-vGu"/>
                     <connections>
-                        <outlet property="emailTextField" destination="u72-XV-6FN" id="0o7-yW-DJW"/>
-                        <outlet property="emailTextfield" destination="u72-XV-6FN" id="Nfc-8N-TNr"/>
-                        <outlet property="passwordTextField" destination="hLb-P9-NkF" id="epJ-Ik-h02"/>
-                        <outlet property="passwordTextfield" destination="hLb-P9-NkF" id="uaM-fo-m8M"/>
                         <segue destination="lwd-AH-u8E" kind="show" identifier="RegisterToChat" id="F4J-Cp-1b5"/>
                     </connections>
                 </viewController>
@@ -263,10 +259,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="HDl-b2-rSu"/>
                     <connections>
-                        <outlet property="emailTextField" destination="F21-w0-z4z" id="LR0-qJ-AyJ"/>
-                        <outlet property="emailTextfield" destination="F21-w0-z4z" id="YUG-Hl-Rxj"/>
-                        <outlet property="passwordTextField" destination="abR-gz-opL" id="O8I-Ys-6xr"/>
-                        <outlet property="passwordTextfield" destination="abR-gz-opL" id="xCU-X2-hrx"/>
                         <segue destination="lwd-AH-u8E" kind="show" identifier="LoginToChat" id="mUF-9r-3XR"/>
                     </connections>
                 </viewController>
@@ -318,9 +310,6 @@
                                         </constraints>
                                         <color key="tintColor" name="BrandLightPurple"/>
                                         <state key="normal" image="paperplane.fill" catalog="system"/>
-                                        <connections>
-                                            <action selector="sendPressed:" destination="lwd-AH-u8E" eventType="touchUpInside" id="GuM-yU-UjQ"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="BrandPurple"/>
@@ -348,8 +337,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q5u-eL-Bgp"/>
                     <connections>
-                        <outlet property="messageTextField" destination="UWj-GQ-Vph" id="5Jx-QU-LXM"/>
-                        <outlet property="messageTextfield" destination="UWj-GQ-Vph" id="INS-Xk-EA9"/>
                         <outlet property="tableView" destination="S6L-hg-cne" id="ukW-IY-sHd"/>
                     </connections>
                 </viewController>
