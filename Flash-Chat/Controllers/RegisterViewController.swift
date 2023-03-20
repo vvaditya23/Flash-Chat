@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
     let validationsCheck = ValidationsCheck()
+    var validEmail: Bool = false
+    var validPassword: Bool = false
     
     var emailInput: String = ""
     var passwordInput: String = ""
@@ -23,13 +28,10 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         
-        let validEmail: Bool
-        let validPassword: Bool
-        
         emailInput = emailTextField.text!
         passwordInput = passwordTextField.text!
         
-        //validate email and password for characters.
+        //validate email and password for valid characters.
         if validationsCheck.isValidEmailAddress(emailAddressString: emailInput) {
             print("valid email.")
             validEmail = true
@@ -40,7 +42,6 @@ class RegisterViewController: UIViewController {
             print("Invalid email.")
             emailTextField.textColor = .red
         }
-        
         if validationsCheck.isValidPassword(passwordAddressString: passwordInput) {
             print("Valid password.")
             validPassword = true
@@ -50,6 +51,18 @@ class RegisterViewController: UIViewController {
         } else {
             print("Invalid password.")
             passwordTextField.textColor = .red
+        }
+        
+        //proceed only if data entered is in valid range
+        if validEmail == true && validPassword == true {
+            Auth.auth().createUser(withEmail: emailInput, password: passwordInput) { authResult, error in
+                if let e = error {
+                    print("Error in creating user: \(e)")
+                } else {
+                    //navigate to the chat VC once successfully registered.
+                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                }
+            }
         }
     }
     
