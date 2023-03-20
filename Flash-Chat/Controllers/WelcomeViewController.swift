@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: CLTypingLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+        ///loop used to give text animation on launch of app, this functionaloity is being handled by the pod now.
+        /*
         titleLabel.text = ""
         var charIndex = 0.0
         let titleText = "⚡️FlashChat"
@@ -22,6 +25,8 @@ class WelcomeViewController: UIViewController {
                 self.titleLabel.text?.append(letter)
             }
             charIndex += 1
-        }
+        }*/
+        
+        titleLabel.text = "⚡️FlashChat";    //assign text for animation at launch
     }
 }
