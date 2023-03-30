@@ -9,5 +9,6 @@ target 'Flash-Chat' do
   
   pod 'CLTypingLabel'
   pod 'IQKeyboardManagerSwift'
+  pod 'SwiftyToolTip'
   
 end

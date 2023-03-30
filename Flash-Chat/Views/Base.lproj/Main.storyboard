@@ -171,6 +171,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="u72-XV-6FN" id="0aK-cG-izw"/>
                         <outlet property="passwordTextField" destination="nu8-Or-nm8" id="Esm-lb-KIM"/>
+                        <outlet property="passwordViewOutlet" destination="j5s-Lc-WfT" id="gmD-kc-qOk"/>
                         <segue destination="lwd-AH-u8E" kind="show" identifier="RegisterToChat" id="F4J-Cp-1b5"/>
                     </connections>
                 </viewController>
@@ -371,9 +372,7 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="y7D-jv-BlJ">
-            <size key="intrinsicContentSize" width="248.5" height="48"/>
-        </designable>
+        <designable name="y7D-jv-BlJ"/>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="F4J-Cp-1b5"/>

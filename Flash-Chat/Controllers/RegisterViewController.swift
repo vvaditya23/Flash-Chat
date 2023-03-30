@@ -24,9 +24,11 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordViewOutlet: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //passwordTextField.addToolTip(description: "Please enter password", gesture: .longPress)
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
@@ -34,8 +36,9 @@ class RegisterViewController: UIViewController {
         emailInput = emailTextField.text!
         passwordInput = passwordTextField.text!
         
+        ///validations are commented because tooltip view is not working as expected
         //validate email and password for valid characters.
-        if validationsCheck.isValidEmailAddress(emailAddressString: emailInput) {
+        /*if validationsCheck.isValidEmailAddress(emailAddressString: emailInput) {
             print("valid email.")
             validEmail = true
         } else if emailTextField.text == nil {
@@ -58,13 +61,13 @@ class RegisterViewController: UIViewController {
         
         //proceed only if data entered is in valid range
         if validEmail == true && validPassword == true {
-            Auth.auth().createUser(withEmail: emailInput, password: passwordInput) { authResult, error in
-                if let e = error {
-                    print("Error in creating user: \(e)")
-                } else {
-                    //navigate to the chat VC once successfully registered.
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
-                }
+                }*/
+        Auth.auth().createUser(withEmail: emailInput, password: passwordInput) { authResult, error in
+            if let e = error {
+                print("Error in creating user: \(e)")
+            } else {
+                //navigate to the chat VC once successfully registered.
+                self.performSegue(withIdentifier: "RegisterToChat", sender: self)
             }
         }
     }
