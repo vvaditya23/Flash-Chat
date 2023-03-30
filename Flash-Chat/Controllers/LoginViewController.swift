@@ -15,4 +15,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+    }
+    
 }

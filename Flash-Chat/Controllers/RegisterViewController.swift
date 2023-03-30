@@ -9,8 +9,11 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
+//import EasyTipView
+import SwiftyToolTip
 
 class RegisterViewController: UIViewController {
+    
     
     let validationsCheck = ValidationsCheck()
     var validEmail: Bool = false
@@ -24,6 +27,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //passwordTextField.addToolTip(description: "Enter password please")
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
