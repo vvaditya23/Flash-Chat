@@ -140,6 +140,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="emailTextFieldisBeingEdited:" destination="BYZ-38-t0r" eventType="editingChanged" id="aWI-eV-OmS"/>
+                                            <action selector="passwordTextFieldisBeingEdited:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="z6K-no-odw"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -370,7 +371,9 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="y7D-jv-BlJ"/>
+        <designable name="y7D-jv-BlJ">
+            <size key="intrinsicContentSize" width="248.5" height="48"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="F4J-Cp-1b5"/>

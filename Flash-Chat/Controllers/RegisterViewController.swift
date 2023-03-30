@@ -27,8 +27,6 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //passwordTextField.addToolTip(description: "Enter password please")
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
